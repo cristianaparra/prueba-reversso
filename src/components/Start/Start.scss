@@ -1,0 +1,146 @@
+@import "../../styles/variables.scss";
+
+.inicio {
+  background-color: $color-Luna;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $color-Hermione;
+
+  @include small {
+    width: 50vw;
+  }
+
+  > .logo {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include small {
+      width: 100%;
+      position: relative;
+      right: 60px;
+      bottom: 260px;
+    }
+
+    > .logo-container {
+      display: flex;
+      flex-direction: column;
+
+      > p {
+        display: none;
+
+        @include small {
+          display: block;
+          color: $color-Harry;
+          font-size: 39px;
+          font-weight: bold;
+          max-width: 460px;
+          margin: 10px 0;
+          padding-top: 22px;
+        }
+      }
+      > .imagen1 {
+        background-image: url("../assets/Logobe.png");
+        width: 320px;
+        height: 130px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+
+        @include small {
+          width: 200px;
+          height: 83px;
+          position: relative;
+          right: 10px;
+        }
+      }
+      > .imagen2 {
+        background-image: url("../assets/Caralogo.png");
+        height: 110px;
+        width: 130px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        align-items: flex-start;
+        position: relative;
+        bottom: 40px;
+        left: 15px;
+
+        @include small {
+          position: relative;
+          height: 90px;
+          width: 90px;
+          left: 290px;
+        }
+      }
+
+      h1 {
+        display: none;
+      }
+    }
+  }
+
+  > .login-mobile {
+    font-size: 14px;
+    width: 100%;
+    @include small{
+      display: none;
+    }
+
+    > .login-mobile-text {
+      padding: 0 24px;
+      > h2 {
+        margin: 5px 0;
+      }
+      > p {
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+    > .login-mobile-buttons {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+
+      > .btn-azul {
+        text-align: center;
+        padding: 1rem;
+        color: white;
+        background-color: $color-Harry;
+        border-radius: 4px;
+        margin-bottom: 14px;
+        text-decoration: none;
+      }
+      > .btn-transarente {
+        text-align: center;
+        padding: 1rem;
+        background-color: inherit;
+        border: $color-Hermione 1px solid;
+        border-radius: 4px;
+        color: $color-Hermione;
+        text-decoration: none;
+      }
+      > .link-nuevo-usuario {
+        text-align: center;
+        padding: 1rem;
+        background-color: inherit;
+        color: $color-Harry;
+
+        > .link {
+          color: $color-Hermione;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

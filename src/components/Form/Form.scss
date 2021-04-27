@@ -1,0 +1,169 @@
+@import "../../styles/variables.scss";
+
+
+.form-usuario1 {
+  font-weight: 500;
+  padding-top: 30px;
+  @include small {
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+    padding-left: 13%;
+
+  }
+  > .imagen2 {
+    background-image: url("../assets/back.png");
+    height: 25px;
+    width: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    bottom: 120px;
+    left: 30px;
+
+    @include small{
+      display: none;
+    }
+  }
+  > form {
+    padding: 0 26.5px;
+    font-size: 14px;
+    color: $color-Hermione;
+    @include small{
+      padding: 0;
+    }
+
+    > .titulo-form {
+      margin-top: -15px;
+      @include small {
+      }
+      > .titulo {
+        display: none;
+
+        @include small {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      > h2 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        margin: 0;
+
+        @include small {
+          font-size: 24px;
+          font-weight: bold;
+        }
+      }
+      > .titulo-mobile {
+        font-size: 16px;
+        margin: 0;
+        padding-bottom: 33px;
+        @include small {
+          display: none;
+        }
+      }
+    }
+    > .campo-form {
+      display: flex;
+      flex-direction: column;
+      color: $color-Harry;
+
+      > input {
+        color: $color-Severus;
+        padding: 0.8rem;
+        margin: 10px 0;
+        background-color: $color-Dobby;
+        border: 1px solid $color-Voldemort;
+        border-radius: 5px;
+      }
+    }
+    > .campo-form-2 {
+      display: flex;
+      flex-direction: column;
+
+      > input {
+        padding: 0.8rem;
+        margin: 10px 0;
+        border-radius: 5px;
+      }
+      > .btn-1 {
+        color: $color-Dobby;
+        border: 1px solid $color-Hermione;
+        background-color: $color-Hermione;
+        @include small{
+          background-color: $color-Harry;
+          border: 1px solid $color-Harry;
+
+        }
+      }
+      > .btn-2 {
+        color: $color-Harry;
+        border: 1px solid $color-Harry;
+        background-color: $color-Dobby;
+        @include small{
+          display: none;
+  
+        }
+      }
+    }
+    > .icono {
+      position: relative;
+      bottom: 42px;
+      left: 285px;
+
+      @include small {
+        display: none;
+      }
+    }
+    > .enlace-cuenta {
+      display: flex;
+      justify-content: flex-end;
+      text-decoration: none;
+      position: relative;
+      bottom: 25px;
+      color: $color-Harry;
+      font-weight: 500;
+    }
+    > .enlace-cuenta2 {
+      display: none;
+      @include small{
+        text-decoration:initial;
+        display: flex;
+        justify-content: center;
+        color: $color-Hermione;
+        padding-top: 40px;
+
+      }
+    }
+    >.card-social{
+      @include small{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+      }
+      >a{
+        padding: 0 20px;
+      }
+      
+    }
+  }
+  > .enlace-cuenta3 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    color: $color-Harry;
+    padding-top: 118px;
+
+    > a {
+      text-decoration: none;
+      color: $color-Hermione;
+    }
+  }
+}

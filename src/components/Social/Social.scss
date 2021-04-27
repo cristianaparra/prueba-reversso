@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+
+>.card_social{
+
+    @include small{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    >a{
+        padding: 0 20px;
+    }
+}
