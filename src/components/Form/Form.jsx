@@ -72,6 +72,9 @@ const Form = () => {
           <Link onClick={() => setState({ showModal: true })} className="btn-2">
             Registrarse con otra cuenta
           </Link>
+          <Link to="/inicio-mobil" className="crear-cuenta">
+          Prueba Mobil
+          </Link>
         </div>
         <a href={"/nueva-cuenta"} className="enlace-cuenta2">
           o iniciar sesión con otra cuenta
