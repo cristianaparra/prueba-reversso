@@ -17,7 +17,7 @@
   > .logo {
     width: 100vw;
     height: 100vh;
-    padding-top: 110px;
+    padding-top: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,7 +73,7 @@
         position: relative;
         align-items: flex-start;
         position: relative;
-        bottom: 40px;
+        bottom: 12%;
         left: 15px;
 
         @include small {
@@ -92,8 +92,10 @@
 
   > .login-mobile {
     font-size: 14px;
-    width: 100%;
-    @include small{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 55px;
+    @include small {
       display: none;
     }
 
@@ -132,7 +134,7 @@
       }
       > .link-nuevo-usuario {
         text-align: center;
-        padding: 1rem;
+        padding: 1.5rem;
         background-color: inherit;
         color: $color-Harry;
 

@@ -1,0 +1,1 @@
+export { default as SucessMobile } from "./SucessMobile";

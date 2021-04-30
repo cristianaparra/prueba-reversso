@@ -1,11 +1,18 @@
+@import "./variables.scss";
 body {
   margin: 0;
   padding: 0;
   font-family: "Avenir";
+  display: flex;
+  flex-direction: column;
   
   >#app .landing {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    @include small{
+      flex-direction: row;
+      flex-wrap: wrap;
+
+    }
   }
 }

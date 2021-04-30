@@ -1,22 +1,33 @@
-import React from "react";
-import Icono from "../assets/Icono.png";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Social from "../Social/Social";
+import Icono from "../assets/Icono.png";
+
 import "./FormRegister.scss";
 
 const FormRegister = () => {
+  const [state, setState] = useState({
+    showModal: false,
+  });
   return (
     <div className="form-usuario">
+      <Social
+        show={state.showModal}
+        onClose={() => setState({ showModal: false })}
+      />
       <div className="logo">
         <div className="logo-container">
           <a className="imagen1" />
-          <div className="imagen2" />
         </div>
+        <Link to="/inicio-mobil">
+          <div className="imagen2" />
+        </Link>
       </div>
       <form>
         <div className="titulo-form">
-          <h3 className="titulo-mobile">Registrarse en be positivite</h3>
+          <h3 className="titulo">Registrarse en be positivite</h3>
         </div>
-        <div className="campo-form">
+        <div className="campo-form1">
           <label htmlFor="name/email">Email/Nombre de usuario</label>
           <input
             type="name/email"
@@ -25,7 +36,7 @@ const FormRegister = () => {
             placeholder="Ingresa email o nombre de usuario"
           />
         </div>
-        <div className="campo-form">
+        <div className="campo-form1">
           <label htmlFor="name">Nombre</label>
           <input
             type="name"
@@ -34,7 +45,7 @@ const FormRegister = () => {
             placeholder="Ingresa nombre"
           />
         </div>
-        <div className="campo-form">
+        <div className="campo-form1">
           <label htmlFor="password">Contraseña</label>
           <input
             type="password"
@@ -53,19 +64,23 @@ const FormRegister = () => {
           />
           <label htmlFor="checkbox">Aceptar términos y condiciones</label>
         </div>
-        <div className="campo-form-2">
-          <input type="submit" value="Crear una cuenta" className="btn-1" />
-          <input
-            className="btn-2"
-            type="submit"
-            value="Registrarse con otra cuenta"
-          />
+        <div className="campo-form2">
+          <Link to="/login-mobil" className="btn-1">
+            Crear una cuenta
+          </Link>
+          <Link onClick={() => setState({ showModal: true })} className="btn-2">
+            Registrarse con otra cuenta
+          </Link>
         </div>
-        <a href={"/nueva-cuenta"} className="enlace-cuenta2">
+        <Link to="/nueva-cuenta" className="enlace-cuenta2">
           o iniciar sesión con otra cuenta
-        </a>
+        </Link>
+        <div className="card_social">
+          <div className="Apple" />
+          <div className="Facebook" />
+          <div className="Google" />
+        </div>
       </form>
-      {/* <Social/> */}
       <div className="enlace-cuenta3">
         ¿Ya eres usuario?
         <a href={"/nueva-cuenta"} className="crear-cuenta">

@@ -1,6 +1,14 @@
 @import "../../styles/variables.scss";
 
 .form-usuario {
+  @include small {
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+    padding-left: 11%;
+  }
   > .logo {
     margin-top: 50px;
     width: 100vw;
@@ -9,6 +17,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include small {
+      display: none;
+    }
 
     > .logo-container {
       display: flex;
@@ -23,17 +34,17 @@
         background-size: contain;
         position: relative;
       }
-      > .imagen2 {
-        background-image: url("../assets/back.png");
-        height: 25px;
-        width: 25px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        position: relative;
-        bottom: 85px;
-        right: 30px;
-      }
+    }
+    >a .imagen2 {
+      background-image: url("../assets/back.png");
+      height: 25px;
+      width: 25px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: relative;
+      bottom: 85px;
+      right: 150px;
     }
   }
 
@@ -41,47 +52,35 @@
     padding: 0 26.5px;
     font-size: 14px;
     color: $color-Hermione;
+    @include small {
+      padding: 0;
+      margin-top: 80px;
+    }
 
     > .titulo-form {
-      > .titulo-mobile {
+      > .titulo {
         font-size: 16px;
         margin: 0;
         padding-bottom: 33px;
         padding-top: 25px;
+
+        @include small {
+          font-size: 24px;
+        }
       }
     }
-    > .campo-form {
+    > .campo-form1 {
       display: flex;
       flex-direction: column;
       color: $color-Harry;
 
+      color: $color-Severus;
       > input {
-        color: $color-Severus;
         padding: 1rem;
         margin: 10px 0;
         background-color: $color-Dobby;
         border: 1px solid $color-Voldemort;
         border-radius: 5px;
-      }
-    }
-    > .campo-form-2 {
-      display: flex;
-      flex-direction: column;
-
-      > input {
-        padding: 1rem;
-        margin: 10px 0;
-        border-radius: 5px;
-      }
-      > .btn-1 {
-        color: $color-Dobby;
-        border: 1px solid $color-Hermione;
-        background-color: $color-Hermione;
-      }
-      > .btn-2 {
-        color: $color-Harry;
-        border: 1px solid $color-Harry;
-        background-color: $color-Dobby;
       }
     }
     > .campo-form-checkbox {
@@ -110,10 +109,42 @@
         background-color: $color-Dobby;
       }
     }
+    >  .campo-form2 {
+      display: flex;
+      flex-direction: column;
+
+      >a  {
+        padding: 1rem;
+        margin: 10px 0;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+      }
+      > .btn-1 {
+        color: $color-Dobby;
+        border: 1px solid $color-Hermione;
+        background-color: $color-Hermione;
+        @include small {
+          background-color: $color-Harry;
+          border: 1px solid $color-Harry;
+        }
+      }
+      > .btn-2 {
+        color: $color-Harry;
+        border: 1px solid $color-Harry;
+        background-color: $color-Dobby;
+        @include small {
+          display: none;
+        }
+      }
+    }
     > .icono {
       position: relative;
       bottom: 42px;
       left: 285px;
+      @include small {
+        left: 90%;
+      }
     }
     > .enlace-cuenta {
       display: flex;
@@ -125,8 +156,48 @@
       font-weight: 500;
     }
     > .enlace-cuenta2 {
-      text-decoration: none;
       display: none;
+      @include small {
+        text-decoration: initial;
+        display: flex;
+        justify-content: center;
+        color: $color-Hermione;
+        padding-top: 35px;
+      }
+    }
+    > .card_social {
+      display: none;
+      @include small {
+        display: flex;
+        justify-content: center;
+      }
+      > div {
+        margin: 15px;
+      }
+      > .Apple {
+        background-image: url("../assets/Apple.png");
+        height: 50px;
+        width: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      > .Facebook {
+        background-image: url("../assets/Facebook.png");
+        height: 50px;
+        width: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      > .Google {
+        background-image: url("../assets/Google.png");
+        height: 50px;
+        width: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
     }
   }
   > .enlace-cuenta3 {
