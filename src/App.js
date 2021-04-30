@@ -9,7 +9,7 @@ import "./styles/App.scss";
 const App = () => {
   return (
     <Router>
-      {/* <Sucess /> */}
+      <Sucess />
       <div className="landing">
         <Switch>
           <Route exact path="/">

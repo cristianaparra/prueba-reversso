@@ -1,6 +1,7 @@
 @import "../../styles/variables.scss";
 
 .form-usuario {
+  height: 100vh;
   @include small {
     width: 29%;
     display: flex;
@@ -32,7 +33,6 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        position: relative;
       }
     }
     >a .imagen2 {
@@ -89,6 +89,7 @@
       font-size: 12px;
       position: relative;
       bottom: 15px;
+      
       > input {
         padding: 0.8rem;
         margin: 10px 0;
@@ -97,16 +98,6 @@
         width: 24px;
         height: 24px;
         opacity: 0.3;
-      }
-      > .btn-1 {
-        color: $color-Dobby;
-        border: 1px solid $color-Hermione;
-        background-color: $color-Hermione;
-      }
-      > .btn-2 {
-        color: $color-Harry;
-        border: 1px solid $color-Harry;
-        background-color: $color-Dobby;
       }
     }
     >  .campo-form2 {
@@ -131,7 +122,7 @@
       }
       > .btn-2 {
         color: $color-Harry;
-        border: 1px solid $color-Harry;
+        border: 0.7px solid $color-Harry;
         background-color: $color-Dobby;
         @include small {
           display: none;
@@ -142,6 +133,7 @@
       position: relative;
       bottom: 42px;
       left: 285px;
+      z-index: 1;
       @include small {
         left: 90%;
       }
@@ -172,7 +164,7 @@
         justify-content: center;
       }
       > div {
-        margin: 15px;
+        margin: 10px;
       }
       > .Apple {
         background-image: url("../assets/Apple.png");

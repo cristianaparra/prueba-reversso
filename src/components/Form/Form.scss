@@ -1,20 +1,18 @@
 @import "../../styles/variables.scss";
 
 .form-usuario1 {
-  font-weight: 500;
-  padding-top: 30px;
   position: relative;
   z-index: 1;
+  height: 100vh;
   @include small {
     width: 29%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top:7%;
     padding-left: 11%;
   }
   > .logo {
-    margin-top: 50px;
+    margin-top: 80px;
     width: 100vw;
     height: 100px;
     display: flex;
@@ -62,13 +60,15 @@
     color: $color-Hermione;
     @include small {
       padding: 0;
-      margin-top: 130px;
+      margin-top: 30%;
     }
 
     > .titulo-form {
-      margin-top: -15px;
+      margin-top: -25px;
       @include small {
+       margin: 0;
       }
+
       > .titulo {
         display: none;
 
@@ -103,12 +103,12 @@
       flex-direction: column;
       color: $color-Harry;
       @include small {
-        padding-top: 10px;
+        padding-top: 5px;
       }
       > input {
         color: $color-Severus;
         padding: 1rem;
-        margin: 10px 0;
+        margin: 14px 0;
         background-color: $color-Dobby;
         border: 1px solid $color-Voldemort;
         border-radius: 5px;
@@ -118,12 +118,14 @@
       display: flex;
       flex-direction: column;
 
-      > input {
+      >a  {
         padding: 1rem;
-        margin: 10px 0;
         border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
       }
       > .btn-1 {
+        margin-bottom: 15px;
         color: $color-Dobby;
         border: 1px solid $color-Hermione;
         background-color: $color-Hermione;
@@ -134,7 +136,7 @@
       }
       > .btn-2 {
         color: $color-Harry;
-        border: 1px solid $color-Harry;
+        border: 0.7px solid $color-Harry;
         background-color: $color-Dobby;
         @include small {
           display: none;
@@ -143,11 +145,11 @@
     }
     > .icono {
       position: relative;
-      bottom: 45px;
+      bottom: 50px;
       left: 285px;
 
       @include small {
-        left: 8%;
+        left: 90%;
       }
     }
     > .enlace-cuenta {
@@ -159,7 +161,7 @@
       color: $color-Harry;
       font-weight: 500;
       @include small {
-        padding-top: 10px;
+        margin-top: -5px;
       }
     }
     > .enlace-cuenta2 {
@@ -169,7 +171,7 @@
         display: flex;
         justify-content: center;
         color: $color-Hermione;
-        padding-top: 40px;
+        padding-top: 30px;
       }
     }
     > .card_social {
@@ -213,6 +215,11 @@
       font-size: 14px;
       color: $color-Harry;
       padding-top: 118px;
+
+      @include small{
+        padding-top: 97px;
+
+      }
   
       > a {
         text-decoration: none;

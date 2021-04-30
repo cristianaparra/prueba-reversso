@@ -1,20 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Social from "../Social/Social";
 import SucessMobile from "../SucessMobile/SucessMobile";
 import Icono from "../assets/Icono.png";
 
 import "./Form.scss";
 
 const Form = () => {
+  const [state, setState] = useState({
+    showModal: false,
+  });
+  const [state2, setState2] = useState({
+    showModal2: false,
+  });
   return (
     <div className="form-usuario1">
+      <Social
+        show={state.showModal}
+        onClose={() => setState({ showModal: false })}
+      />
+      <SucessMobile
+        show={state2.showModal}
+        onClose={() => setState2({ showModal2: false })}
+      />
       <div className="logo">
         <div className="logo-container">
           <a className="imagen1" />
         </div>
       </div>
-      <Link to='/inicio-mobil'>
-      <div className="imagen2" />
+      <Link to="/inicio-mobil">
+        <div className="imagen2" />
       </Link>
       <form>
         <div className="titulo-form">
@@ -43,16 +58,20 @@ const Form = () => {
           ></input>
         </div>
         <img className="icono" src={Icono}></img>
-        <a href={"/nueva-cuenta"} className="enlace-cuenta">
+        <a  className="enlace-cuenta">
           ¿Olvidaste tu contraseña?
         </a>
         <div className="campo-form2">
-          <input type="submit" value="Iniciar Sesión" className="btn-1" />
-          <input
-            className="btn-2"
-            type="submit"
-            value="Iniciar sesion con otra cuenta"
-          />
+          <Link
+            to="/login-mobil"
+            onClick={() => setState2({ showModal: true })}
+            className="btn-1"
+          >
+            Iniciar sesión
+          </Link>
+          <Link onClick={() => setState({ showModal: true })} className="btn-2">
+            Registrarse con otra cuenta
+          </Link>
         </div>
         <a href={"/nueva-cuenta"} className="enlace-cuenta2">
           o iniciar sesión con otra cuenta
@@ -64,12 +83,11 @@ const Form = () => {
         </div>
         <div className="enlace-cuenta3">
           ¿Eres un nuevo usuario?{"  "}
-          <Link to="/registro" className="crear-cuenta">
-            Crear una cuenta
+          <Link to="/registro-mobil" className="crear-cuenta">
+          Crear una cuenta
           </Link>
         </div>
       </form>
-      <SucessMobile />
     </div>
   );
 };

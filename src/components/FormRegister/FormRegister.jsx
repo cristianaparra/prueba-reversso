@@ -73,7 +73,7 @@ const FormRegister = () => {
           </Link>
         </div>
         <Link to="/nueva-cuenta" className="enlace-cuenta2">
-          o iniciar sesión con otra cuenta
+        O registrarse con otra cuenta
         </Link>
         <div className="card_social">
           <div className="Apple" />
@@ -83,9 +83,8 @@ const FormRegister = () => {
       </form>
       <div className="enlace-cuenta3">
         ¿Ya eres usuario?
-        <a href={"/nueva-cuenta"} className="crear-cuenta">
-          Ingresar
-        </a>
+        <Link to="/login-mobil" className="crear-cuenta">{" "}Ingresar
+        </Link>
       </div>
     </div>
   );

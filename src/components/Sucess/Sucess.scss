@@ -3,7 +3,7 @@
 .Sucess-bar {
   display: none;
   @include  small{
-    width: 100%;
+    width: 100vw;
     background-color: #4ca484;
     height: 37px;
     display: flex;

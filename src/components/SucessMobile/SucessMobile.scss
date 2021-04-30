@@ -1,16 +1,13 @@
 @import "../../styles/variables.scss";
 
 .Sucess-bar-mobil {
-  width: 100%;
+  width: 100vw;
   height: 77px;
   border-radius: 10px 10px 0 0;
   background-color: #4ca484;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  z-index: 4;
-  bottom: -5%;
+  z-index: 2;
+  bottom: 0;
   @include small{
     display: none;
   }
@@ -21,5 +18,7 @@
     color: $color-Dobby;
     font-size: 16px;
     font-weight: 100;
+    padding: 1rem;
+    margin: auto;
   }
 }
